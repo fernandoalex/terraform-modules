@@ -4,17 +4,7 @@ This repository the modules I'm creating while using terraform.
 
 ## Modules
 
-- [aws-elk](#aws-elk)
 - [bg-poc](#bg-poc)
-
-###aws-elk
-
-[ELK](https://www.elastic.co/webinars/introduction-elk-stack) is a stack used to centralize and analyse logs. It is compose of:
-- ElasticSearch
-- Kibana
-- LogStash
-
-This module uses the ElasticSearch service of AWS, the Kibana plugin, and creates an instance with a LogStash Docker container.
 
 ###bg-poc
 

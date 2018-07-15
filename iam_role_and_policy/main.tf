@@ -1,13 +1,3 @@
-# Template Role Policy
-# Template IAM Policy
-variable default_role_policy {
-  default = "templates/default_role_policy.json"
-}
-
-variable default_iam_policy {
-  default = "templates/default_iam_policy.json"
-}
-
 data "template_file" "role_policy" {
   template = "${var.role_policy == "" ? file("${path.module}/templates/default_role_policy.json") : var.role_policy}"
 }

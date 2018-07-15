@@ -7,7 +7,7 @@ data "template_file" "iam_policy" {
 }
 
 resource "aws_iam_role" "iam_role" {
-  name = "${var.iam_role_name}"
+  name = "${var.role_policy_name}"
 
   assume_role_policy = "${data.template_file.role_policy.rendered}"
 }

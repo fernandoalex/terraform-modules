@@ -7,15 +7,15 @@ data "template_file" "iam_policy" {
 }
 
 resource "aws_iam_role" "iam_role" {
-  name = "iam_for_lambda"
+  name = "${var.iam_role_name}"
 
   assume_role_policy = "${data.template_file.role_policy.rendered}"
 }
 
 resource "aws_iam_policy" "iam_policy" {
-  name        = "test_policy"
+  name        = "${var.iam_policy_name}"
   path        = "/"
-  description = "My test policy"
+  description = "some description"
 
   policy = "${data.template_file.iam_policy.rendered}"
 }
